@@ -2,7 +2,7 @@
   <div class="login-warp">
     <!-- 登录框 -->
     <div class="login-box">
-      <div class="yx-tit">管理系统</div>
+      <div class="yx-tit">扶梯监控系统</div>
       <el-form
         :model="ruleForm"
         :rules="rules"
@@ -74,35 +74,18 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
             this.loading = true;
-
-        //     this.$axios.post("login/login", {
-        //       username: this.ruleForm.name,
-        //       password: this.ruleForm.pass,
-        //       value: this.ruleForm.code
-        //     }, {headers: {
-        //     'Content-type': "application/json",
-        //     'Set-Cookie': 'PHPSESSID=' + cooke}})
-        //     .then(response => {
-        //     console.log(response)})
-        //     .catch(error => {
-        //     console.log(error)
-        // })
-            // console.log(cooke);
             this.$post("index/login", {
               name: this.ruleForm.name,
               pass: this.ruleForm.pass,
             })
               .then((res) => {
-                console.log(res);
-                return;
-                if (res.code == "success") {
-                  this.$message.success(res.msg);
+                // console.log(res);
+                // return;
+                if (res.code == 1) {
+                  this.$message.success(res.message);
                   localStorage.setItem('token',res.data.token);
-                  localStorage.setItem('permissions',JSON.stringify(res.data.role_power));
                   localStorage.setItem('username',this.ruleForm.name);
-               
                   this.$router.push('/');
-
                 } else {
                   this.loading = !this.loading;
                   this.$message.error(res.msg);
