@@ -20,8 +20,8 @@ Vue.prototype.$del = del;
 Vue.prototype.$put = put;
 
 
-// axios.defaults.baseURL = 'http://escalator.linbd.top/';
-axios.defaults.baseURL = '/api';
+axios.defaults.baseURL = 'http://escalator.linbd.top/';
+// axios.defaults.baseURL = '/api';
 
 
 // request拦截器

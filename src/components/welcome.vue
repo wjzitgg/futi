@@ -62,7 +62,7 @@
 </script>
 <style>
  .el-header {
-    background-color: #6b5858;
+    background-color: #32385D;
     text-align: center;
     line-height: 60px;
   }

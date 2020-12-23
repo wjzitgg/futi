@@ -8,6 +8,10 @@
       <div class="fold-btn" @click="collapseChage">
         <i class="el-icon-menu"></i>
       </div>
+
+      <div class="escalator">
+        <i class="el-icon-location"></i> 越秀测试 A梯
+      </div>
     </div>
     <!-- 右边 -->
   <div class="head-right">
@@ -48,7 +52,7 @@
       this.username = localStorage.getItem('username')
     },
     methods: {
-      // 全屏事件
+          // 全屏事件
             handleFullScreen(){
                this.$router.push('/')
             },
@@ -122,11 +126,13 @@
     color: #fff;
     position: absolute;
     top: -16px;
-
   }
   .el-dropdown-menu , .el-popper {
     top: 42px !important;
   }
   
- 
+  .escalator {
+    font-size: 14px;
+    color: coral;
+  }
 </style>

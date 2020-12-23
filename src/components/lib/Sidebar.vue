@@ -4,8 +4,9 @@
       :default-active="onRoutes"
       class="el-menu-vertical-demo"
       :collapse="logo"
-      background-color="#545c64"
-      text-color="#d0dcf3"
+      background-color="#535A85"
+      text-color="#D1D5F3"
+      
       router
     >
       <el-menu-item
@@ -84,7 +85,11 @@
   .el-menu-item {
     font-size: 16px;
   }
-  .el-menu-item i {
-    color: #d0dcf3;
+  /* .el-menu-item i {
+    color: #D1D5F3;
+  } */
+  >>> .el-menu-item.is-active {
+    color: #D1D5F3;
+    background: linear-gradient(90deg, #555c86, #8489a7);
 }
 </style>
