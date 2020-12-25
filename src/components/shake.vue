@@ -31,7 +31,8 @@
     </div>
     <!-- 折线图和历史数据 -->
     <div class="datum">
-
+      <img src="../../static/321.png" alt="" width="1360px" height="200px" style="margin-bottom: 30px;">
+      <img src="../../static/31.png" alt="" width="1260px" height="300px">
     </div>
   </div>
 </template>
